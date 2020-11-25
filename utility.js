@@ -11,16 +11,19 @@ class GamblerSimulation{
    }
    GamblerWinOrLoose(){
 
+       while (this.Stake < 150 && this.Stake > 50) {
+
        let result = this.checkWinOrLoose();
-       if (result == 1) {
+ 
+      if (result == 1) {
            this.win += 1;
            this.Stake += 1;
-           console.log( "You won 1 dollar")
        }
+
        if (result == 0) {
            this.lose += 1;
            this.Stake -= 1;
-           console.log("You lost 1 dollar")
+	}
        }
     }
    }
