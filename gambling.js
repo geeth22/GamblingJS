@@ -1,2 +1,3 @@
-let betamount = 1;
-let stake = 1;
+let Utility = require('./Utility');
+
+Utility.GamblerWinOrLoose();
