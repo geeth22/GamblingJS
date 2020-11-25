@@ -1,10 +1,12 @@
 class GamblerSimulation{
-    Stake = 100
-    betamount = 1
    
     constructor(win, lose){
-       this.win = win;
-       this.lose = lose;
+	this.Stake = 100;
+	this.betamount = 1 ;
+       	this.win = 0;
+       	this.lose = 0;
+	this.totalDays = 0;
+        this.totalAmount = 0;
    }
    checkWinOrLoose(){
        return Math.floor(Math.random() * Math.floor(2));
@@ -26,5 +28,22 @@ class GamblerSimulation{
 	}
        }
     }
-   }
+	resultAfter20Days() {
+        	try {
+            	while (this.totalDays < 20) {
+                this.GamblerWinOrLoose();          
+                console.log("Earned: " + this.Stake);
+                this.totalAmount = this.totalAmount + this.Stake;
+                this.Stake = 100;
+                this.totalDays++;
+                console.log("Day: " + this.totalDays); 
+                console.log(" Total amount: " + this.totalAmount);
+            }
+            console.log("Total Days: " + this.totalDays + " Total amount: " + this.totalAmount);
+        }
+        catch (e) {
+            console.log("Exception: " + e);
+        }
+    }
+}
    module.exports = new GamblerSimulation();
