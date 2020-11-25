@@ -1,1 +1,1 @@
-// Welcome to Gambling simulation problem
+// Welcome to Gambling simulation program
