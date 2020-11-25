@@ -1,1 +1,2 @@
-// Welcome to Gambling simulation program
+let betamount = 1;
+let stake = 1;
