@@ -48,6 +48,14 @@ class GamblerSimulation{
                 console.log(" Total amount: " + this.totalAmount);
             }
             console.log("Total Days: " + this.totalDays + " Total amount: " + this.totalAmount);
+	
+	if (this.luckiestDay >= this.unluckiestDay) {
+                console.log("continue for next month");
+            }
+            else {
+                console.log("stop");
+            }
+
         }
         catch (e) {
             console.log("Exception: " + e);
