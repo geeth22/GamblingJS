@@ -7,6 +7,8 @@ class GamblerSimulation{
        	this.lose = 0;
 	this.totalDays = 0;
         this.totalAmount = 0;
+	this.luckiestDay = 0;
+        this.unluckiestDay = 0;
    }
    checkWinOrLoose(){
        return Math.floor(Math.random() * Math.floor(2));
@@ -26,11 +28,17 @@ class GamblerSimulation{
            this.lose += 1;
            this.Stake -= 1;
 	}
+	if (this.Stake == 150) {
+        this.luckiestDay += 1;
+    	}
+    	if (this.Stake == 50) {
+       	this.unluckiestDay += 1;
+    	}
        }
     }
-	resultAfter20Days() {
+	resultAfter30Days() {
         	try {
-            	while (this.totalDays < 20) {
+            	while (this.totalDays < 30) {
                 this.GamblerWinOrLoose();          
                 console.log("Earned: " + this.Stake);
                 this.totalAmount = this.totalAmount + this.Stake;
